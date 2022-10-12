@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 class Bank 
@@ -17,7 +18,7 @@ class Bank
     }
     void show()
     {
-        cout<<" Account no. is "<<acno<<"\n Name is "<<name<<"\n Balance is "<<bal<<" rs."<<endl;
+        cout<<"Account no. is "<<acno<<"\nName is "<<name<<"\nBalance is "<<bal<<" rs."<<endl;
     }
     float getBal()
     {
@@ -58,14 +59,27 @@ class Bank
 };
 
 int main() {
-    
     Bank a;
-    a.input();
-    a.show();
-    a.Deposit();
-    a.withdraw();
-   
-    
-
-    return 0;
+    int num;
+    cout<<"Press 1- Show account status\n"<<"Press 2- Deposit Money in the account\n"<<"Press 3- Withdraw Money from the account\n";
+    cin>>num;
+    switch (num)
+    {
+        case 1:
+        a.input();
+        a.show();
+        break;
+        case 2:
+        a.input();
+        a.Deposit();
+        break;
+        case 3:
+        a.input();
+        a.withdraw();
+        break;
+        default:
+        cout<<"Invalid entry!";
+      }
+      return 0;
 }
+
